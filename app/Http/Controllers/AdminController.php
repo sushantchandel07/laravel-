@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
+
+
+    
     public function admin(Request $request)
     {
         $roles = Role::all();
