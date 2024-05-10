@@ -1,4 +1,5 @@
-@include('common.header')
+@extends('layouts.main')
+@section('mainsection')
 <div class="home">
     <div class="container-fluid">
         <div class="row pt-5 row-gap-2">
@@ -214,4 +215,4 @@
         <div class="col-sm-12 col-lg-6 app-car-img"><img src="{{asset('assets/images/home/Rectangle 519.png')}}" class="pt-5" alt=""></div>
     </div>
 </div>
-@include('common.footer')
+@endsection

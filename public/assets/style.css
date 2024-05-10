@@ -199,7 +199,43 @@
     display: none;
   }
   
+
+
+
+
+
+ .gallery-item {
+    position: relative;
+    overflow: hidden; /* Ensures overlay doesn't overflow */
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay a,
+.gallery-overlay button {
+    display: block; /* Ensures buttons are on separate lines */
+    margin-bottom: 5px; /* Adds some space between buttons */
+}
+
+
   
+
+
+
+
   
   @media only screen and (max-width:480px) {
     .profile-edit {
@@ -260,7 +296,14 @@
 
 } 
 
-
+.fixed-image {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+  }
+  .card-img-top {
+    width: 100%;
+  }
 
 /* #profileImageContainer {
     position: relative;
@@ -283,6 +326,15 @@ input[type="file"] {
   /* .container-width{
     max-width: 1570px;
   } */
+  .addgallerybutton{
+    margin-right:207px;
+    margin-bottom: 20px;
+  }
+  .addimagesbutton{
+    margin-right:180px;
+    margin-top:20px;
+    margin-bottom: 20px;
+  }
   @media only screen and (max-width:600px) {
   
     .form {

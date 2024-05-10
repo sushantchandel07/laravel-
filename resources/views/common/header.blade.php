@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
   <title>Carsafe</title>
   <link rel="icon" type="image/x-icon" href="{{asset ('assets/images/Group 46.png')}}">
-
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -13,10 +14,9 @@
   <link rel="stylesheet"href="{{ asset('assets/style.css') }}">
   <link rel="stylesheet" href="../assets/css/album.css">
   <!-- <link rel="shortcut icon" href="../assets/images/Group 46.png" type="image/x-icon"> -->
-    
 </head>
 <body>
-
+{{-- {{$status}} --}}
   <nav class="navbar navbar-expand-lg nav bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{('/')}}"><img src="{{ asset('assets/images/logo.png') }}" class="nav-logo" alt=""></a>
@@ -33,28 +33,17 @@
           </li>
         </ul>
         <div class="button-group d-flex gap-2">
-                @if(Auth::check())
-                    <a href="{{url('/profile')}}" class="link-light link-offset-2 link-underline-opacity-0">
-                        <button type="button" class="btn rounded-0 text-white profile nav-btn">
-                            <i class="fa-solid fa-user" style="color: #ffffff;"></i> Profile
-                        </button>
-                    </a>
+              
                     <a href="{{url('/logout')}}" class="link-light link-offset-2 link-underline-opacity-0">
                         <button type="button" class="btn rounded-0 text-white login nav-btn">Logout</button>
                     </a>
-                @else
-                    <a href="{{url('/login')}}" class="link-light link-offset-2 link-underline-opacity-0">
-                        <button type="button" class="btn rounded-0 text-white login nav-btn">Login</button>
-                    </a>
-                    <a href="{{url('/signup')}}" class="link-light link-offset-2 link-underline-opacity-0">
-                        <button type="button" class="btn rounded-0 text-white sign nav-btn">Signup</button>
-                    </a>
-                @endif
+              
             </div>
       </div>
 
     </div>
   </nav>
-
-
+   
+   @yield('content')
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('password');
-            $table->string('country');
+            $table->string('country_id');
             $table->string('gender');
             $table->json('hobbies');
             $table->timestamps();   

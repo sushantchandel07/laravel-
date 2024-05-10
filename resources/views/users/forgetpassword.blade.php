@@ -1,16 +1,13 @@
-@include('common/header')
+@extends('layouts.main')
+@section('mainsection')
 <div class="container login-form">
-
     <div class="row align-items-center justify-content-center g-1 gap-2">
-
         <div class="col col-sm-12 col-lg-6 form-img">
             <img src="{{asset('assets/images/home/Rectangle.png')}}" class="img-fluid" alt="..." height="80%" width="95%">
         </div>
-
         <div class="col col-sm-12 col-lg-4 form">
-
             <form method= "post">
-     
+             @csrf
                 <div class="d-flex justify-content-center align-items-center flex-column">
                     <h3 class=" fs-2 fw-bold">Forget your password?</h3>
                     <!-- <p class="text-center fs-5">Please enter the email you use to <br> sign in to acme.</p> -->
@@ -29,17 +26,9 @@
                         </span>
                     <button type="submit" class="btn btn-primary rounded-0 btn-lg login-form-btn form-btn border-0 fw-bold">Request Password Reset</button>
                 </div>
-
-
-
             </form>
-
         </div>
-
-
     </div>
-
 </div>
-
-@include('common/footer')
+@endsection
 
